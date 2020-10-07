@@ -9,9 +9,14 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
      ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ReactiveFormsModule,
     RouterModule.forRoot([

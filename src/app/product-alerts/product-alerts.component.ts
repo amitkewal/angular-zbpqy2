@@ -30,12 +30,10 @@ export class ProductAlertsComponent implements OnInit {
 
     this.swPush.requestSubscription({
         serverPublicKey: this.publicKey,
-      })
-      .then((sub) => {
+      }).then((sub) => {
         // Make a post call to serve
         console.log(JSON.stringify(sub));
-      })
-      .catch((err) => console.log(err));
+      }).catch((err) => console.log("--------",JSON.stringify(err)));
   }
 
 }
