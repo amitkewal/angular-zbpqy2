@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
 import {SwPush} from '@angular/service-worker';
-import {enableProdMode} from '@angular/core';
 
-enableProdMode();
 @Component({
   selector: 'app-product-alerts',
   templateUrl: './product-alerts.component.html',
@@ -20,14 +18,14 @@ export class ProductAlertsComponent implements OnInit {
 
   ngOnInit() {
     this.pushSubscription();
-    this.swPush.messages.subscribe((message) => console.log(message));
+    this.swPush.messages.subscribe((message) => console.log("||||||||||",message));
   }
 
 
     pushSubscription() {
     if (!this.swPush.isEnabled) {
       console.log('Notification is not enabled');
-      return;
+      // return;
     }
 
     this.swPush.requestSubscription({
