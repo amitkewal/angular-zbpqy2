@@ -28,14 +28,14 @@ export class ProductAlertsComponent implements OnInit {
       window.open(notification.data.url);
     });
 
-    // this.http.get('https://webpushtest-291012.firebaseapp.com/?87618=').subscribe(
-    //   (res: any) => {
-    //     this.apiData = res.data;
-    //   },
-    //   (err) => {
-    //     console.error(err);
-    //   }
-    // );
+    this.http.get('https://angular-zbpqy2.stackblitz.io/').subscribe(
+      (res: any) => {
+        this.apiData = res.data;
+      },
+      (err) => {
+        console.error(err);
+      }
+    );
   }
 
   pushSubscription() {
