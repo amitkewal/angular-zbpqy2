@@ -17,7 +17,7 @@ export class ProductAlertsComponent implements OnInit {
   private readonly publicKey =
     "BLlFd7xr7xV3Hjce48ARU98KQ-hpJEblngRlMzMMn17__Vw_rH4WFlcqzJPktV3XRoUOeADnlMzmmoqJban5898";
 
-  constructor(readonly swPush: SwPush,private http: HttpClient,) {}
+  constructor(private swPush: SwPush,private http: HttpClient,) {}
 
   ngOnInit() {
     this.pushSubscription();
@@ -39,10 +39,10 @@ export class ProductAlertsComponent implements OnInit {
   }
 
   pushSubscription() {
-    if (!this.swPush.isEnabled) {
-      console.log("Notification is not enabled");
-      // return;
-    }
+    // if (!this.swPush.isEnabled) {
+    //   console.log("Notification is not enabled");
+    //   // return;
+    // }
 
     this.swPush
       .requestSubscription({
